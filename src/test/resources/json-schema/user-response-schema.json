@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "_id": { "type": "integer" },
+        "teams": { "type": "array" },
+        "surname": { "type": "string" },
+        "firstname": { "type": "string" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "roles": { "type": "array" },
+        "positions": { "type": "array" },
+        "plainPassword": { "type": "string" },
+        "cities": { "type": "array" },
+        "companies": { "type": "array" },
+        "work_history": { "type": "array" },
+        "edu_history": { "type": "array" },
+        "cd": { "type": "string" },
+        "password": { "type": "string" },
+        "name": { "type": "string" }
+      },
+      "required": ["_id", "username", "email"]
+    }
+  },
+  "required": ["data"]
+}
