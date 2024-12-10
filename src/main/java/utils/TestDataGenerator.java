@@ -1,5 +1,6 @@
 package utils;
 
+import dto.request.QuestionRequest;
 import dto.request.UserRequest;
 import net.datafaker.Faker;
 
@@ -64,6 +65,10 @@ public class TestDataGenerator {
         users.add(createUser("", faker.bothify("?????@###"), faker.internet().emailAddress(), "", faker.regexify("[!@#$%^&*()_+]{8}"), "user", false, LocalDate.now().format(DateTimeFormatter.ISO_DATE), "pause_search"));
         users.add(createUser("", faker.bothify("?????@###"), faker.bothify("?????@###"), faker.bothify("?????@###"), "", "admin", true, "2024-08-25", "on_project"));
         return users;
+    }
+
+    public static QuestionRequest getQuestion() {
+        return new QuestionRequest("MyTestQuestion");
     }
 
     private static UserRequest createUser(String firstName, String surname, String email, String username, String plainPassword, String roles, boolean isCV, String salesOpenTime, String salesStatus) {

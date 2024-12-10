@@ -3,8 +3,8 @@ package utils;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import dto.request.AuthRequest;
 import dto.response.UserResponse;
+import dto.response.QuestionResponse;
 import org.bson.Document;
 import org.junit.jupiter.api.AfterAll;
 
@@ -20,6 +20,9 @@ public class DatabaseHelper {
     public static Document getUserFromDatabase(UserResponse userResponse) {
         return database.getCollection("users").find(new Document("_id", userResponse.getData().get_id())).first();
 
+    }
+    public static Document getQuestionFromDatabase(QuestionResponse questionResponse) {
+        return database.getCollection("themequestions").find(new Document("_id", questionResponse.getData().get_id())).first();
     }
 
     @AfterAll

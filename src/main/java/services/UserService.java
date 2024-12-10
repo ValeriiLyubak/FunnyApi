@@ -1,4 +1,4 @@
-package services.auth;
+package services;
 
 import dto.request.UserRequest;
 import dto.response.UserResponse;

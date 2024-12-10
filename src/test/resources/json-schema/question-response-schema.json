@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "_id": { "type": "integer" },
+        "quizes": { "type": "array", "items": { "type": "string" } },
+        "__names": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "type": "object", "properties": { "name": { "type": "string" } }, "required": ["name"] },
+              { "type": "null" }
+            ]
+          }
+        },
+        "name": { "type": "string" },
+        "contributors": { "type": "array", "items": { "type": "string" } },
+        "decliners": { "type": "array", "items": { "type": "string" } },
+        "hints": { "type": "array", "items": { "type": "string" } },
+        "additionalQuestionsArr": { "type": "array", "items": { "type": "string" } },
+        "useCases": { "type": "array", "items": { "type": "string" } },
+        "videos": { "type": "array", "items": { "type": "string" } },
+        "facts": { "type": "array", "items": { "type": "string" } },
+        "interviews": { "type": "array", "items": { "type": "string" } },
+        "hashTags": { "type": "array", "items": { "type": "string" } },
+        "shortAnswers": { "type": "array", "items": { "type": "string" } },
+        "detailedAnswers": { "type": "array", "items": { "type": "string" } },
+        "cd": { "type": "string", "format": "date-time" },
+        "isDuplicated": { "type": "boolean" },
+        "useCasesLength": { "type": "integer" },
+        "factsLength": { "type": "integer" },
+        "answerProgressCount": { "type": "integer" }
+      },
+      "required": ["_id", "quizes", "__names", "name", "contributors", "decliners", "hints", "additionalQuestionsArr", "useCases", "videos", "facts", "interviews", "hashTags", "shortAnswers", "detailedAnswers", "cd", "isDuplicated", "useCasesLength", "factsLength", "answerProgressCount"]
+    }
+  },
+  "required": ["data"]
+}

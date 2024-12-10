@@ -5,7 +5,7 @@ import dto.response.UserResponse;
 import io.restassured.response.Response;
 import org.bson.Document;
 import org.junit.jupiter.api.Test;
-import services.auth.UserService;
+import services.UserService;
 import utils.DatabaseHelper;
 import utils.TestDataGenerator;
 
@@ -32,7 +32,6 @@ public class UserAddTest extends BaseTest {
 
         logger.debug("Ответ от сервера: {}", response.asPrettyString());
 
-        // Преобразуем ответ в объект UserResponse
         UserResponse userResponse = userService.parseResponse(response);
         logger.info("Ответ успешно разобран в объект UserResponse.");
 

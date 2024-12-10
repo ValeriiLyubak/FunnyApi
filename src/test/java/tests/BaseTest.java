@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.auth.AuthService;
+import services.AuthService;
 
 import java.io.File;
 
