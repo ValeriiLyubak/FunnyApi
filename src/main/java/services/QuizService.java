@@ -26,7 +26,4 @@ public class QuizService {
                 .response();
     }
 
-//    public UserResponse parseResponse(Response response) {
-//        return response.as(UserResponse.class);
-//    }
 }
