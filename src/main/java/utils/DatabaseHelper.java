@@ -3,6 +3,7 @@ package utils;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
+import dto.response.QuizResponse;
 import dto.response.UserResponse;
 import dto.response.QuestionResponse;
 import org.bson.Document;
@@ -10,8 +11,8 @@ import org.junit.jupiter.api.AfterAll;
 
 
 public class DatabaseHelper {
-    private static final MongoClient mongoClient = MongoClients.create("mongodb://javacode:bestEducationEver@80.66.64.141:27017/estim?authSource=admin");
-    private static final MongoDatabase database = mongoClient.getDatabase("estim");
+    private static final MongoClient mongoClient = MongoClients.create("mongodb://javacode:bestEducationEver@193.233.193.42:27017/javacodeDb?authSource=admin");
+    private static final MongoDatabase database = mongoClient.getDatabase("javacodeDb");
 
 
     public static Document getUserByUsername(String username) {
@@ -23,6 +24,10 @@ public class DatabaseHelper {
     }
     public static Document getQuestionFromDatabase(QuestionResponse questionResponse) {
         return database.getCollection("themequestions").find(new Document("_id", questionResponse.getData().get_id())).first();
+    }
+
+    public static Document getQuizFromDatabase(QuizResponse quizResponse) {
+        return database.getCollection("quizzes").find(new Document("_id", quizResponse.getData().get_id())).first();
     }
 
     @AfterAll

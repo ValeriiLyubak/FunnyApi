@@ -1,16 +1,23 @@
-target/
+### Maven ###
+/target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+
+### Gradle ###
+/.gradle/
+/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-*.iws
-*.iml
-*.ipr
+.out/
 
 ### Eclipse ###
 .apt_generated
@@ -27,12 +34,26 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+
+### Logs ###
+*.log
+logs/
+
+### Jenkins ###
+.lastSuccessful
+.lastStable
+
+### Miscellaneous ###
+*.swp
+*~
+

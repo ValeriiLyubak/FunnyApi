@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
 
         assertThat(username)
                 .as("Имя пользователя должно совпадать с ожидаемым значением")
-                .isEqualTo("valery_lyubakov");
+                .isEqualTo("sup_admin");
         logger.info("Проверка имени пользователя прошла успешно.");
 
         Document userDocument = DatabaseHelper.getUserByUsername(username);
@@ -57,7 +57,7 @@ public class LoginTest extends BaseTest {
 
         assertThat(userDocument.getString("username"))
                 .as("Имя пользователя в базе данных должно совпадать с ожидаемым значением")
-                .isEqualTo("valery_lyubakov");
+                .isEqualTo("sup_admin");
         logger.info("Имя пользователя в базе данных совпадает с ожидаемым значением.");
     }
 }

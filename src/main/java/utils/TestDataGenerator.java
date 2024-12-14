@@ -1,17 +1,14 @@
 package utils;
 
 import dto.request.QuestionRequest;
+import dto.request.QuizRequest;
 import dto.request.UserRequest;
 import net.datafaker.Faker;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TestDataGenerator {
 
@@ -69,6 +66,14 @@ public class TestDataGenerator {
 
     public static QuestionRequest getQuestion() {
         return new QuestionRequest("MyTestQuestion");
+    }
+
+    public static List<QuizRequest.Variation> getVariationList() {
+        List<QuizRequest.Variation> variations = new ArrayList<>();
+        variations.add(new QuizRequest.Variation("", true));
+        variations.add(new QuizRequest.Variation("", null));
+        variations.add(new QuizRequest.Variation("", null));
+        return variations;
     }
 
     private static UserRequest createUser(String firstName, String surname, String email, String username, String plainPassword, String roles, boolean isCV, String salesOpenTime, String salesStatus) {
